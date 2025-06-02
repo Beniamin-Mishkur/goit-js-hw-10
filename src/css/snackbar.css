@@ -1,0 +1,139 @@
+
+.form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.delay-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  align-self: flex-start;
+}
+
+
+input#delay {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding: 0 8px;
+  font-size: 16px;
+
+  transition: border-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+}
+
+input#delay:hover {
+  border-color: #000;
+}
+
+input#delay:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+
+
+.field-state {
+  width: 360px;
+  height: 64px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 0 16px 0 16px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+.field-state > legend {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 6px;
+  position: absolute;
+  top: -10px; 
+  left: 12px;
+  background-color: white;
+  color: #333;
+  user-select: none;
+}
+
+.radios-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: 64px;
+  align-items: center; 
+  padding: 0; 
+}
+
+.radio-label {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.radio-label input[type='radio'] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.field-state:hover,
+.field-state:focus-within {
+  border-color: #000;
+}
+
+button#createNotification {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background-color: #4e75ff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+button#createNotification:hover {
+  background-color: #6c8cff;
+}
+
+.iziToast.fulfilled-toast {
+  border-bottom: 2px solid #b5ea7c !important;
+  background-color: #59a10d !important;
+  border-radius: 4px !important;
+  padding: 20px 20px !important;
+  height: 64px !important;
+  color: #fff !important;
+}
+
+.iziToast.rejected-toast {
+  border-bottom: 2px solid #ffbebe !important;
+  background-color: #ef4040 !important;
+  border-radius: 4px !important;
+  padding: 20px !important;
+  height: 64px !important;
+  color: #fff !important;
+}
+
+

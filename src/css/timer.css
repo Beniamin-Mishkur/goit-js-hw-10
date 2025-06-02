@@ -1,0 +1,280 @@
+/* ======== GENERAL ======== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #2e2f42;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #4e75ff;
+}
+
+/* ======== CONTROLS ======== */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+#datetime-picker {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 280px;
+  height: 40px;
+  padding: 0 12px;
+  background-color: #fafafa;
+}
+
+#datetime-picker:hover {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+#datetime-picker:focus {
+  border: 1px solid #4e75ff;
+  background-color: #fff;
+  outline: none;
+}
+
+#datetime-picker:disabled {
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: #fafafa;
+}
+
+/* ======== BUTTON ======== */
+.start-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 75px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-btn:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+.start-btn:not(:disabled) {
+  background-color: #4e75ff;
+  color: #fff;
+}
+
+.start-btn:not(:disabled):hover {
+  background-color: #6c8cff;
+}
+
+/* ======== TIMER ======== */
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+/* ======== CALENDAR (flatpickr) ======== */
+.flatpickr-calendar {
+  border-radius: 8px !important;
+  padding: 16px !important;
+  width: 280px !important;
+  height: 352px !important;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dayContainer {
+  box-sizing: border-box;
+  width: 248px;
+}
+
+.flatpickr-days {
+  width: 248px !important;
+  height: 224px !important;
+  margin: 0 auto;
+}
+
+.flatpickr-time {
+  border-top: 1px solid #c1c1c1;
+  padding: 16px 0 0 0;
+  width: 248px;
+  height: 36px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.flatpickr-months,
+.flatpickr-current-month {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.flatpickr-day.today {
+  border-radius: 100% !important;
+  border: 1px solid #4e75ff !important;
+}
+
+.flatpickr-day:hover {
+  border-radius: 100% !important;
+  background: #c1c1c1 !important;
+}
+
+.flatpickr-day.selected {
+  border-radius: 100% !important;
+  background: #4e75ff !important;
+  color: #fff !important;
+}
+
+.timer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 346px;
+  height: 72px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flatpickr-time {
+  border-top: 1px solid #c1c1c1;
+  padding-top: 26px;
+  width: 248px;
+  height: 36px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.flatpickr-time .flatpickr-hour,
+.flatpickr-time .flatpickr-minute,
+.flatpickr-time .flatpickr-time-separator {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  line-height: 1;
+  text-align: center;
+}
+
+.flatpickr-time input {
+  text-align: center;
+}
+
+.flatpickr-current-month .numInputWrapper {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.iziToast {
+  border-bottom: 2px solid #ffbebe;
+  border-radius: 4px;
+  padding: 20px;
+  height: 64px;
+  background-color: #ef4040 !important;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+.iziToast-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #fff !important;
+  margin-right: 8px;
+}
+
+.iziToast-message {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #fff !important;
+}
